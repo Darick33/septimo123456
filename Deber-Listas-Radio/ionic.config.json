@@ -1,0 +1,7 @@
+{
+  "name": "Deber-Listas-Radio",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}

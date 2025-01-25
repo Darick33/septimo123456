@@ -1,0 +1,68 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>Temperatura</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">Temperatura</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-item>
+    <ion-label position="floating" style="margin-bottom: 20px;">Valor de Entrada</ion-label>
+    <ion-input [(ngModel)]="valorEntrada" type="number" placeholder="Ingresa un valor"></ion-input>
+  </ion-item>
+
+  <div style="display: flex; justify-content: space-between; margin-top: 16px; margin-bottom: 50px;">
+    <ion-list style="flex: 1; margin-right: 8px;">
+      <ion-header>
+        <ion-toolbar color="tertiary">
+          <ion-title size="small" text-center>Unidades de Entrada</ion-title>
+        </ion-toolbar>
+      </ion-header>
+      <ion-item>
+        <ion-label>°C - Celsius</ion-label>
+        <ion-checkbox [(ngModel)]="checkCelsiusEntrada" slot="start" value="C"></ion-checkbox>
+      </ion-item>
+      <ion-item>
+        <ion-label>°F - Fahrenheit</ion-label>
+        <ion-checkbox [(ngModel)]="checkFahrenheitEntrada" slot="start" value="F"></ion-checkbox>
+      </ion-item>
+      <ion-item>
+        <ion-label>K - Kelvin</ion-label>
+        <ion-checkbox [(ngModel)]="checkKelvinEntrada" slot="start" value="K"></ion-checkbox>
+      </ion-item>
+    </ion-list>
+
+    <ion-list style="flex: 1; margin-left: 8px;">
+      <ion-header>
+        <ion-toolbar color="tertiary">
+          <ion-title size="small" text-center>Unidades de Salida</ion-title>
+        </ion-toolbar>
+      </ion-header>
+      <ion-item>
+        <ion-label>°C - Celsius</ion-label>
+        <ion-checkbox [(ngModel)]="checkCelsiusSalida" slot="start" value="C"></ion-checkbox>
+      </ion-item>
+      <ion-item>
+        <ion-label>°F - Fahrenheit</ion-label>
+        <ion-checkbox [(ngModel)]="checkFahrenheitSalida" slot="start" value="F"></ion-checkbox>
+      </ion-item>
+      <ion-item>
+        <ion-label>K - Kelvin</ion-label>
+        <ion-checkbox [(ngModel)]="checkKelvinSalida" slot="start" value="K"></ion-checkbox>
+      </ion-item>
+    </ion-list>
+  </div>
+
+  <ion-item>
+    <ion-label position="floating" style="margin-bottom: 20px;">Valor de Salida</ion-label>
+    <ion-input [value]="valorSalida" type="number" placeholder="Resultado" readonly></ion-input>
+  </ion-item>
+
+  <ion-button expand="block" color="success" style="margin: 10px;" (click)="convertirUnidades()">Convertir</ion-button>
+  <ion-button expand="block" color="success" style="margin: 10px;" routerLink="/home">Volver</ion-button>
+</ion-content>

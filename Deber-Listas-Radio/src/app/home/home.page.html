@@ -1,0 +1,28 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Programa para Transformación de Medidas
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">Transformación de Medidas</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <div id="container" style="text-align: center; padding: 20px;">
+    <strong>Seleccione una categoría:</strong>
+    <ion-button expand="block" color="primary" style="margin: 10px;" routerLink="/distancia">
+      Distancia
+    </ion-button>
+    <ion-button expand="block" color="secondary" style="margin: 10px;" routerLink="/peso">
+      Peso
+    </ion-button>
+    <ion-button expand="block" color="tertiary" style="margin: 10px;" routerLink="/temperatura">
+      Temperatura
+    </ion-button>
+  </div>
+</ion-content>

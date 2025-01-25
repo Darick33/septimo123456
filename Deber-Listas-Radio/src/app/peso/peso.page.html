@@ -1,0 +1,79 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>Peso</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">Peso</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-item>
+    <ion-label position="floating" style="margin-bottom: 20px;">Valor de Entrada</ion-label>
+    <ion-input type="number" [(ngModel)]="valorEntrada" placeholder="Ingresa un valor"></ion-input>
+  </ion-item>
+
+  <div style="display: flex; justify-content: space-between; margin-top: 16px; margin-bottom: 50px;">
+    <ion-list style="flex: 1; margin-right: 8px;">
+      <ion-header>
+        <ion-toolbar color="primary">
+          <ion-title size="small" text-center>Unidades de Entrada</ion-title>
+        </ion-toolbar>
+      </ion-header>
+      <ion-radio-group (ionChange)="seleccionarUnidad($event.detail.value, 'entrada')">
+        <ion-item>
+          <ion-label>T - Toneladas</ion-label>
+          <ion-radio slot="start" value="T"></ion-radio>
+        </ion-item>
+        <ion-item>
+          <ion-label>Kg - Kilogramos</ion-label>
+          <ion-radio slot="start" value="KG"></ion-radio>
+        </ion-item>
+        <ion-item>
+          <ion-label>Lb - Libras</ion-label>
+          <ion-radio slot="start" value="LB"></ion-radio>
+        </ion-item>
+        <ion-item>
+          <ion-label>g - Gramos</ion-label>
+          <ion-radio slot="start" value="G"></ion-radio>
+        </ion-item>
+      </ion-radio-group>
+    </ion-list>
+
+    <ion-list style="flex: 1; margin-left: 8px;">
+      <ion-header>
+        <ion-toolbar color="primary">
+          <ion-title size="small" text-center>Unidades de Salida</ion-title>
+        </ion-toolbar>
+      </ion-header>
+      <ion-radio-group (ionChange)="seleccionarUnidad($event.detail.value, 'salida')">
+        <ion-item>
+          <ion-label>T - Toneladas</ion-label>
+          <ion-radio slot="start" value="T"></ion-radio>
+        </ion-item>
+        <ion-item>
+          <ion-label>Kg - Kilogramos</ion-label>
+          <ion-radio slot="start" value="KG"></ion-radio>
+        </ion-item>
+        <ion-item>
+          <ion-label>Lb - Libras</ion-label>
+          <ion-radio slot="start" value="LB"></ion-radio>
+        </ion-item>
+        <ion-item>
+          <ion-label>g - Gramos</ion-label>
+          <ion-radio slot="start" value="G"></ion-radio>
+        </ion-item>
+      </ion-radio-group>
+    </ion-list>
+  </div>
+
+  <ion-item>
+    <ion-label position="floating" style="margin-bottom: 20px;">Valor de Salida</ion-label>
+    <ion-input type="number" [value]="valorSalida" readonly></ion-input>
+  </ion-item>
+
+  <ion-button expand="block" color="success" style="margin: 10px;" routerLink="/home">Volver</ion-button>
+</ion-content>
