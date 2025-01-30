@@ -25,6 +25,10 @@ export class ActualizarContactoPage implements OnInit {
       this.cod_contacto = res;
       this.cargarDatos();
     });
+  
+  
+  
+  
   }
 
   cargarDatos() {
