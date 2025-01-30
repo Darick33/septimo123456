@@ -1,0 +1,29 @@
+
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>Actualizar contacto</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-item>
+    <ion-label position= "floating">Nombre</ion-label>
+    <ion-input [(ngModel)] = "text_nombre" type = "text"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label position= "floating">Apellido</ion-label>
+    <ion-input [(ngModel)] = "text_apellido"  type = "text"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label position= "floating" type = "text" >Telefono</ion-label>
+    <ion-input [(ngModel)] = "text_telefono"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label position= "floating"  type = "email">Correo</ion-label>
+    <ion-input [(ngModel)] = "text_correo"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-button color = "success" >Guardar</ion-button>
+    <ion-button color = "success" >Cancelar</ion-button>
+  </ion-item>
+</ion-content>

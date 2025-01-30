@@ -1,0 +1,58 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      <ion-item>
+        <ion-label class="titulo">Agenda</ion-label>
+      </ion-item>
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <div id="contenedor" >
+    
+
+    <ion-item>
+      <img src="../../assets/imgs/agendas.png" alt="" style="display: block; width: 50%; height: auto; margin-left: auto; margin-right: auto;">
+    </ion-item>
+    <ion-item>
+      <ion-label class="etiqueta">Agenda Electronica</ion-label>
+    </ion-item>
+    <ion-card color="light">
+      <ion-card-header>
+        <ion-card-title>Inicio de Sesion</ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+        <ion-item>
+          <ion-label position="floating">Usuario</ion-label>
+          <ion-input type="text" [(ngModel)]="txt_usuario"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label position="floating">Clave</ion-label>
+          <ion-input type="password" [(ngModel)]="txt_clave"></ion-input>
+        </ion-item>
+        <div class="text-center mb-4">
+          <ion-item>
+            <ion-button id="open-loading" expand="block" color="success" (click)="login()">Iniciar Sesión</ion-button>
+          </ion-item>
+          <ion-loading trigger="open-loading" message="Loading..." [duration]="3000" spinner="circles"></ion-loading>
+        </div>
+        <ion-item>
+          <table>
+            <tr>
+              <td class="ion-margin" class="ion-padding">
+                <span class="opciones"(click) = "crear()">Crear Cuenta</span>
+              </td>
+              <td>
+                <span class = "opciones" (click) = "recuperar()">Recuperar Clave</span>
+              </td>
+            </tr>
+          </table>
+        </ion-item>
+      </ion-card-content>
+
+    </ion-card>
+  
+  </div>
+    
+</ion-content>
